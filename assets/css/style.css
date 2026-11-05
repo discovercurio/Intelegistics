@@ -536,6 +536,39 @@ a.card:hover::before, .card.is-hover:hover::before { opacity: 1; }
 .flow h3 { font-size: 1.08rem; margin-bottom: .4rem; }
 .flow p { font-size: .93rem; color: var(--muted); }
 
+/* ---------- Circularity (circular-economy loop) ---------- */
+.circ-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; }
+.r-phrase {
+  font-family: var(--font-display); font-style: italic; font-weight: 700;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.35; margin: 0 0 1rem;
+  background: var(--grad-silver); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.r-list { list-style: none; padding: 0; margin: 1.75rem 0 0; display: grid; gap: 1rem; }
+.r-list li { display: grid; grid-template-columns: 42px 1fr; gap: .95rem; align-items: start; }
+.r-ico {
+  width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+  background: linear-gradient(160deg, rgba(255,75,79,.18), rgba(220,31,38,.05));
+  border: 1px solid rgba(255,75,79,.28); color: var(--red-bright);
+}
+.r-ico .icon { width: 20px; height: 20px; }
+.r-list strong { display: block; font-family: var(--font-display); font-weight: 600; color: #fff; font-size: 1.05rem; line-height: 1.3; }
+.r-list div > span { display: block; color: var(--muted); font-size: .95rem; line-height: 1.5; }
+
+.circ-visual { position: relative; width: 100%; max-width: 640px; aspect-ratio: 600 / 540; justify-self: center; }
+.circ-visual svg { width: 100%; height: 100%; overflow: visible; display: block; }
+.circ-chip {
+  position: absolute; transform: translate(var(--tx), var(--ty));
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .4rem .9rem .4rem .4rem; border-radius: 999px;
+  background: rgba(24, 32, 43, .85);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border: 1px solid var(--line-strong); box-shadow: var(--shadow);
+  font-family: var(--font-display); font-weight: 600; font-size: .95rem; color: #fff;
+  white-space: nowrap; z-index: 2;
+}
+.circ-chip .n { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--grad-red); color: #fff; flex: none; }
+.circ-chip .n .icon { width: 16px; height: 16px; }
+
 /* ---------- Stats band ---------- */
 .stats {
   display: grid; grid-template-columns: repeat(4, 1fr);
@@ -799,6 +832,8 @@ a.card:hover::before, .card.is-hover:hover::before { opacity: 1; }
   .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
   .cta-box { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .circ-grid { grid-template-columns: 1fr; }
+  .circ-visual { max-width: 560px; margin-top: 1.5rem; }
   .page-hero-orbit { opacity: .25; right: -300px; }
   .compare-row { grid-template-columns: 1fr; gap: .5rem; }
   .compare-row .arrow { transform: rotate(90deg); margin-left: .1rem; }
@@ -821,4 +856,7 @@ a.card:hover::before, .card.is-hover:hover::before { opacity: 1; }
   .btn-row .btn { flex: 1 1 100%; }
   .engagement { min-width: 0; width: 100%; }
   .split-media::before { display: none; }
+  .circ-chip { font-size: .72rem; gap: .35rem; padding: .25rem .6rem .25rem .25rem; }
+  .circ-chip .n { width: 22px; height: 22px; }
+  .circ-chip .n .icon { width: 12px; height: 12px; }
 }
