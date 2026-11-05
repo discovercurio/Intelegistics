@@ -356,7 +356,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   background: var(--grad-red); color: #fff; flex: none;
 }
 .hero-chip .chip-ico .icon { width: 20px; height: 20px; }
-.hero-chip--a { left: -2%; top: 14%; animation: float 8s ease-in-out infinite; }
+.hero-chip--a { left: -5%; top: 3%; animation: float 8s ease-in-out infinite; }
 .hero-chip--b { right: -3%; bottom: 14%; animation: float 9s ease-in-out -3s infinite; }
 
 /* ---------- Page hero (inner pages) ---------- */
