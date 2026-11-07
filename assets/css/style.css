@@ -733,7 +733,10 @@ a.card:hover::before, .card.is-hover:hover::before { opacity: 1; }
 .device-card .photo-slot { border-radius: 0; box-shadow: none; border: 0; border-bottom: 1px dashed rgba(196,210,230,.18); --ratio: 4 / 3; }
 .device-card .photo-slot:has(img) { border-bottom: 1px solid var(--line); }
 .device-card .device-body { padding: 1.5rem 1.6rem 1.75rem; }
-.device-card h3 { display: flex; align-items: center; gap: .6rem; font-size: 1.15rem; }
+.device-card h3 { display: flex; align-items: flex-start; gap: .6rem; font-size: 1.15rem; line-height: 1.25; }
+.device-card h3 .icon { margin-top: .12rem; flex: none; }
+.device-grid .device-body { padding: 1.35rem 1.4rem 1.6rem; }
+.device-grid .device-card h3 { font-size: 1.08rem; }
 .device-card h3 .icon { color: var(--red-bright); width: 20px; height: 20px; }
 .device-card p { font-size: .95rem; }
 
@@ -753,6 +756,8 @@ a.card:hover::before, .card.is-hover:hover::before { opacity: 1; }
 .cta-box h2 { margin-bottom: .4em; }
 .cta-box .check-list { margin-top: 0; }
 .cta-box .btn-row { margin-top: 2rem; }
+.cta-box--solo { grid-template-columns: 1fr; }
+.cta-box--solo > div { max-width: 780px; }
 .cta-orbit { position: absolute; right: -120px; bottom: -220px; width: 520px; opacity: .35; pointer-events: none; }
 
 /* ---------- Contact ---------- */
