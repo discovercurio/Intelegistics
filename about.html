@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About | Intelegistics</title>
-  <meta name="description" content="Intelegistics is an advisory and operating practice focused on reverse logistics, device lifecycle management, ITAD, secondary markets, and circular-economy programs since 2002.">
+  <meta name="description" content="Since 2002, Intelegistics has helped companies design, launch, and scale reverse logistics and asset recovery programs that turn returns, surplus inventory, and end-of-life assets into commercial value.">
   <meta name="theme-color" content="#0f141b">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Intelegistics, Inc.">
   <meta property="og:title" content="About | Intelegistics">
-  <meta property="og:description" content="Intelegistics is an advisory and operating practice focused on reverse logistics, device lifecycle management, ITAD, secondary markets, and circular-economy programs since 2002.">
+  <meta property="og:description" content="Since 2002, Intelegistics has helped companies design, launch, and scale reverse logistics and asset recovery programs that turn returns, surplus inventory, and end-of-life assets into commercial value.">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/exo-2-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -22,6 +22,11 @@
       var n = +(img.dataset.n || 0);
       if (n < __photoExt.length) { img.dataset.n = n + 1; img.src = img.dataset.base + "." + __photoExt[n]; }
       else { img.remove(); }
+    }
+    /* Frames marked data-fit="natural" take the photo's own proportions, so nothing gets cropped. */
+    function __photoFit(img) {
+      var f = img.parentNode;
+      if (f && f.dataset.fit === "natural" && img.naturalWidth) f.style.setProperty("--ratio", img.naturalWidth + " / " + img.naturalHeight);
     }
   </script>
 </head>
@@ -66,8 +71,8 @@
   <div class="container reveal">
     <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">About</li></ol></nav>
     <span class="eyebrow">About Intelegistics</span>
-    <h1>Built from operating experience, <span class="text-red">not observation.</span></h1>
-    <p class="lead">Since 2002, Intelegistics has helped companies design, launch, and scale the reverse side of the supply chain, where product comes back and value is won or lost.</p>
+    <h1>Built on operating experience, <span class="text-red">designed for recovered value.</span></h1>
+    <p class="lead">Since 2002, Intelegistics has helped companies design, launch, and scale reverse logistics and asset recovery programs, turning returns, surplus inventory, and end-of-life assets into commercial value.</p>
     
   </div>
 </section>
@@ -75,16 +80,18 @@
 <section class="section">
   <div class="container">
     <div class="split">
-  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 5" data-photo-slot="about-story">
-  <img src="assets/img/photos/about-story.jpg" data-base="assets/img/photos/about-story" alt="The Intelegistics team on a device-processing floor" loading="lazy" onerror="__photo(this)">
+  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 5" data-photo-slot="about-story" data-fit="natural">
+  <img src="assets/img/photos/about-story.jpg" data-base="assets/img/photos/about-story" alt="The Intelegistics team on a device-processing floor" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
   <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: The Intelegistics team on a device-processing floor</span><code>photos/about-story.jpg or .png</code></figcaption>
 </figure></div>
   <div class="split-body reveal">
       <span class="eyebrow">Our story</span>
-      <h2>An advisory <span class="text-red">and</span> operating practice</h2>
-      <p class="muted">Intelegistics is an advisory and operating practice focused on reverse logistics, device lifecycle management, ITAD, secondary markets, and circular-economy programs.</p>
-      <p class="muted">We&rsquo;ve maintained this practice alongside executive leadership roles, supporting device traders, ITAD operators, technology providers, and circular-economy businesses across the United States, United Kingdom, Middle East, and Asia. Engagements range from business development and market expansion to hands-on operational implementation for returns, trade-ins, excess inventory, refurbishment, and end-of-life equipment.</p>
-      <p class="muted">Based in the Dallas&ndash;Fort Worth Metroplex, we work remotely with clients wherever their operations are.</p></div>
+      <h2>Built on experience.<br><span class="text-red">Driven by execution.</span></h2>
+      <p class="muted">Founded in 2002, Intelegistics combines decades of executive leadership and hands-on operating experience in reverse logistics, asset recovery, secondary markets, and supply chain management.</p>
+      <p class="muted">Our roots extend to the founding and development of RMS Logistics, where we helped design, launch, and scale reverse supply chain operations. That same operating discipline continues to shape how we approach business today.</p>
+      <p class="muted">We work with companies across consumer electronics, telecommunications, Greentech, healthcare technology, industrial equipment, and other commercial sectors to recover value from returns, trade-ins, excess inventory, and end-of-life assets.</p>
+      <p class="muted">Our capabilities span business development, market expansion, program design, logistics and processing operations, technology integration, refurbishment, and secondary-market sales. We combine strategic planning with practical implementation, building programs that perform under real operating conditions.</p>
+      <p class="muted">Based in the Dallas&ndash;Fort Worth Metroplex, Intelegistics supports clients across the United States, United Kingdom, Middle East, and Asia, providing both on-site and remote engagement as business needs require.</p></div>
 </div>
   </div>
 </section>
@@ -103,12 +110,11 @@
   <div class="container">
     <div class="section-head center reveal">
   <span class="eyebrow">Our values</span>
-  <h2>How we work, <span class="text-red">every time</span></h2>
-  <p class="lead">Five values shape every program we design, every partner we bring in, and every conversation along the way.</p>
+  <h2>How we work, <span class="text-red">every time.</span></h2>
+  <p class="lead">Five core values guide every engagement, from program design and implementation to operations and value realization.</p>
 </div>
-    <ol class="values reveal-stagger">
-      <li class="value"><span class="value-num">01</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg></span><h3>Communication</h3><p>Clear, frequent, and honest. Clients and partners always know where a program stands, what comes next, and what we need from them.</p></li><li class="value"><span class="value-num">02</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.97a4 4 0 0 0 3.3-1.7l5.46-7.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.97a4 4 0 0 1 3.6 2.2"/><path d="M22 18h-6.04a4 4 0 0 1-3.3-1.8l-.36-.45"/></svg></span><h3>Flexibility</h3><p>No two reverse supply chains are alike. We adapt to your products, volumes, systems, and markets instead of forcing a template.</p></li><li class="value"><span class="value-num">03</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Trust</h3><p>Devices, data, and margin are on the line. We earn trust through transparency, secure handling, and doing exactly what we say we&rsquo;ll do.</p></li><li class="value"><span class="value-num">04</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span><h3>Cooperation</h3><p>We work as an extension of your team and connect 3PLs, processors, technology providers, and buyers so everyone pulls in the same direction.</p></li><li class="value"><span class="value-num">05</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><h3>Efficiency</h3><p>Fewer touches, shorter cycle times, and less waste. Efficiency is how recovered product becomes real, visible margin.</p></li>
-    </ol>
+    <ol class="values reveal-stagger"><li class="value"><span class="value-num">01</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg></span><h3>Communication</h3><p>Clear, frequent, and honest communication. Clients and partners always know where a program stands, what comes next, and what we need from them.</p></li><li class="value"><span class="value-num">02</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.97a4 4 0 0 0 3.3-1.7l5.46-7.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.97a4 4 0 0 1 3.6 2.2"/><path d="M22 18h-6.04a4 4 0 0 1-3.3-1.8l-.36-.45"/></svg></span><h3>Flexibility</h3><p>Agile and solutions-oriented. We adapt to your products, volumes, systems, and market conditions instead of forcing a one-size-fits-all model.</p></li><li class="value"><span class="value-num">03</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Trust</h3><p>A commitment to transparency, data security, and responsible handling. We do what we say we&rsquo;ll do&mdash;with integrity and accountability.</p></li><li class="value"><span class="value-num">04</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span><h3>Cooperation</h3><p>A true extension of your team. We connect people, partners, and processes across 3PLs, processors, technology providers, and buyers to keep programs moving forward.</p></li><li class="value"><span class="value-num">05</span><span class="value-ico"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><h3>Efficiency</h3><p>Operational discipline that reduces cycle times, controls costs, and minimizes waste&mdash;turning recovered product into real, visible value.</p></li></ol>
+    <div class="glow-line" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -117,34 +123,40 @@
   <div class="container">
     <div class="section-head center reveal">
   <span class="eyebrow">What we believe</span>
-  <h2>The principles behind <span class="text-red">every program</span></h2>
-  
+  <h2>The principles behind <span class="text-red">every program.</span></h2>
+  <p class="lead">Three principles shape how we design, implement, and operate programs that deliver measurable results.</p>
 </div>
     <div class="grid grid-3 reveal-stagger">
-      <div class="card"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div><h3>Margin hides in the reverse flow</h3><p>Handling cost, downgraded units, and idle inventory rarely show up clearly on the P&amp;L. Finding them is where the work starts.</p></div>
-      <div class="card"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div><h3>Build for real volume</h3><p>A program that looks good on paper but breaks at volume isn&rsquo;t a program. We design for the day volume spikes.</p></div>
-      <div class="card"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Do, don&rsquo;t just advise</h3><p>We help build the process, connect the partners, and solve the constraints, and stay hands-on until it performs.</p></div>
+      <div class="card principle"><div class="icon-tile icon-tile--glow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div><h3>Make value visible</h3><p>Every unnecessary touch, downgraded unit, and idle inventory erodes margin. We identify where value is lost and build processes to recover it.</p></div>
+      <div class="card principle"><div class="icon-tile icon-tile--glow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div><h3>Engineer for scale</h3><p>A program must perform beyond the pilot. We design workflows, infrastructure, and operating controls that maintain quality, throughput, and cost efficiency as volumes grow.</p></div>
+      <div class="card principle"><div class="icon-tile icon-tile--glow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Do, don&rsquo;t just advise</h3><p>We bring both strategy and execution&mdash;building the process, connecting the right partners, solving constraints, and staying hands-on until it performs.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="split split--reverse">
-  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 5" data-photo-slot="about-founder">
-  <img src="assets/img/photos/about-founder.jpg" data-base="assets/img/photos/about-founder" alt="Portrait of the Intelegistics founder and CEO" loading="lazy" onerror="__photo(this)">
-  <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Portrait of the Intelegistics founder and CEO</span><code>photos/about-founder.jpg or .png</code></figcaption>
+<section class="section founder-section">
+  <div class="container founder-grid">
+    <div class="founder-photo reveal"><figure class="photo-slot photo-slot--blend" style="--ratio:4 / 5" data-photo-slot="about-founder" data-fit="natural">
+  <img src="assets/img/photos/about-founder.jpg" data-base="assets/img/photos/about-founder" alt="Portrait of Larry Worden, Founder and CEO" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
+  <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Portrait of Larry Worden, Founder and CEO</span><code>photos/about-founder.jpg or .png</code></figcaption>
 </figure></div>
-  <div class="split-body reveal">
+    <div class="founder-body reveal">
       <span class="eyebrow">From the founder</span>
-      <figure class="quote">
+      <figure class="founder-card">
+        <span class="founder-mark" aria-hidden="true">&ldquo;</span>
         <blockquote>
-          <p>The reverse side of the supply chain is often where margin quietly disappears. Handling costs accumulate. Recoverable units are downgraded. Inventory sits too long. Valuable channels go unused.</p>
-          <p>We help companies identify where value is created, delayed, or lost across the product lifecycle, then build practical programs that perform under real operating volume.</p>
+          <p class="founder-lead">The reverse side of the supply chain is often where <span class="text-red">margin quietly disappears.</span></p>
+          <p>Handling costs accumulate, good units get graded down, and inventory can sit too long. Valuable recovery channels are often overlooked&mdash;and most of it never shows up clearly on the P&amp;L.</p>
+          <p>At Intelegistics, we help companies find and capture that hidden value. We identify where value is created, delayed, or lost across the product lifecycle and build practical, scalable programs that perform under real operating volume.</p>
         </blockquote>
-        <figcaption><strong>Founder &amp; CEO</strong>, Intelegistics, Inc.</figcaption>
-      </figure></div>
-</div>
+        <figcaption>
+          <span class="sig-rule" aria-hidden="true"></span>
+          <span class="signature" aria-hidden="true">Larry Worden</span>
+          <strong class="founder-name">Larry Worden</strong>
+          <span class="founder-title">Founder &amp; CEO, Intelegistics, Inc.</span>
+        </figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 

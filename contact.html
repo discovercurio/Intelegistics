@@ -23,6 +23,11 @@
       if (n < __photoExt.length) { img.dataset.n = n + 1; img.src = img.dataset.base + "." + __photoExt[n]; }
       else { img.remove(); }
     }
+    /* Frames marked data-fit="natural" take the photo's own proportions, so nothing gets cropped. */
+    function __photoFit(img) {
+      var f = img.parentNode;
+      if (f && f.dataset.fit === "natural" && img.naturalWidth) f.style.setProperty("--ratio", img.naturalWidth + " / " + img.naturalHeight);
+    }
   </script>
 </head>
 <body>

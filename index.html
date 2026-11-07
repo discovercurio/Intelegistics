@@ -23,6 +23,11 @@
       if (n < __photoExt.length) { img.dataset.n = n + 1; img.src = img.dataset.base + "." + __photoExt[n]; }
       else { img.remove(); }
     }
+    /* Frames marked data-fit="natural" take the photo's own proportions, so nothing gets cropped. */
+    function __photoFit(img) {
+      var f = img.parentNode;
+      if (f && f.dataset.fit === "natural" && img.naturalWidth) f.style.setProperty("--ratio", img.naturalWidth + " / " + img.naturalHeight);
+    }
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Intelegistics, Inc.", "foundingDate": "2002", "description": "Advisory and operating practice focused on reverse logistics, device lifecycle management, ITAD, secondary markets, and circular-economy programs.", "areaServed": ["United States", "United Kingdom", "Middle East", "Asia"], "address": {"@type": "PostalAddress", "addressRegion": "TX", "addressLocality": "Dallas-Fort Worth", "addressCountry": "US"}, "sameAs": ["https://www.linkedin.com/company/109301424/"]}</script>
 </head>
@@ -232,8 +237,8 @@
   <div class="texture-grid"></div>
   <div class="container">
     <div class="split">
-  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:5 / 4" data-photo-slot="home-who-we-work-with">
-  <img src="assets/img/photos/home-who-we-work-with.jpg" data-base="assets/img/photos/home-who-we-work-with" alt="Team sorting returned devices on a processing line" loading="lazy" onerror="__photo(this)">
+  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:5 / 4" data-photo-slot="home-who-we-work-with" data-fit="natural">
+  <img src="assets/img/photos/home-who-we-work-with.jpg" data-base="assets/img/photos/home-who-we-work-with" alt="Team sorting returned devices on a processing line" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
   <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Team sorting returned devices on a processing line</span><code>photos/home-who-we-work-with.jpg or .png</code></figcaption>
 </figure></div>
   <div class="split-body reveal">
@@ -249,8 +254,8 @@
 <section class="section">
   <div class="container">
     <div class="split split--reverse">
-  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:5 / 4" data-photo-slot="home-hands-on">
-  <img src="assets/img/photos/home-hands-on.jpg" data-base="assets/img/photos/home-hands-on" alt="Operator inspecting and grading a smartphone at a test bench" loading="lazy" onerror="__photo(this)">
+  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:5 / 4" data-photo-slot="home-hands-on" data-fit="natural">
+  <img src="assets/img/photos/home-hands-on.jpg" data-base="assets/img/photos/home-hands-on" alt="Operator inspecting and grading a smartphone at a test bench" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
   <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Operator inspecting and grading a smartphone at a test bench</span><code>photos/home-hands-on.jpg or .png</code></figcaption>
 </figure></div>
   <div class="split-body reveal">

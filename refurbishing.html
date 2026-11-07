@@ -23,6 +23,11 @@
       if (n < __photoExt.length) { img.dataset.n = n + 1; img.src = img.dataset.base + "." + __photoExt[n]; }
       else { img.remove(); }
     }
+    /* Frames marked data-fit="natural" take the photo's own proportions, so nothing gets cropped. */
+    function __photoFit(img) {
+      var f = img.parentNode;
+      if (f && f.dataset.fit === "natural" && img.naturalWidth) f.style.setProperty("--ratio", img.naturalWidth + " / " + img.naturalHeight);
+    }
   </script>
 </head>
 <body>
@@ -75,8 +80,8 @@
 <section class="section">
   <div class="container">
     <div class="split">
-  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-bench">
-  <img src="assets/img/photos/refurb-bench.jpg" data-base="assets/img/photos/refurb-bench" alt="Technicians refurbishing smartphones at a repair bench" loading="lazy" onerror="__photo(this)">
+  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-bench" data-fit="natural">
+  <img src="assets/img/photos/refurb-bench.jpg" data-base="assets/img/photos/refurb-bench" alt="Technicians refurbishing smartphones at a repair bench" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
   <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Technicians refurbishing smartphones at a repair bench</span><code>photos/refurb-bench.jpg or .png</code></figcaption>
 </figure></div>
   <div class="split-body reveal">
@@ -104,8 +109,8 @@
 <section class="section">
   <div class="container">
     <div class="split split--reverse">
-  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-data-security">
-  <img src="assets/img/photos/refurb-data-security.jpg" data-base="assets/img/photos/refurb-data-security" alt="Secure data-wipe station with devices connected" loading="lazy" onerror="__photo(this)">
+  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-data-security" data-fit="natural">
+  <img src="assets/img/photos/refurb-data-security.jpg" data-base="assets/img/photos/refurb-data-security" alt="Secure data-wipe station with devices connected" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
   <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Secure data-wipe station with devices connected</span><code>photos/refurb-data-security.jpg or .png</code></figcaption>
 </figure></div>
   <div class="split-body reveal">
